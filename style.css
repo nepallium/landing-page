@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top */
+.top {
+    flex: 0 1 400px; 
+    /* since body container's flex direction = column,
+    by setting flex-basis to 400px, its height is 400px 
+    (and considering box-sizing = border-box) */
+
+    display: flex;
+    justify-content: center; /* center Header and Hero */
+
+    background-color: #1F2937;
+    padding-top: 12px;
+}
+
+/* two "top" containers necessary to keep header spacing format */
+.top-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a, .hero p {
+    text-decoration: none;
+    font-size: 16px;
+    color: #E5E7EB;
+}
+
+.logo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+/* Hero */
+.hero {
+    margin: auto;
+    /* centers vertically in "top" and horizontally by divviing remaining space */
+    align-self: center;
+    display: flex;
+    gap: 24px;
+}
+
+.image-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* separates the horizontal space between .image and .image-left */
+}
+.image-left button {
+    /* keep button size */
+    flex-grow: 0;
+    align-self: flex-start;
+
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-weight: 600;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+}
+
+.top-image {
+    background-color: #d5d8ddc4;
+    flex: 0 0 500px; /* prevent growing (else it'll distort image) */
+    height: 250px;
+
+    /* center the image filler text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-image p {
+    margin: 0;
+    color: #F9FAF8;
+}
+
+.main {
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+/* MIDDLE RANDOM INFO */
+.middle-info {
+    flex: 0 1 425px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-info .header {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+    text-align: center;
+}
+
+.illustrations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.square-images {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.square-images .empty-image {
+    flex: 0 1 150px;
+    width: 150px;
+    border: 3px solid #3882F6;
+    border-radius: 8px;
+}
+
+.square-images .subtext {
+    margin-top: 8px;
+    width: 150px;
+    text-align: center;
+    color: #1F2937
+}
+
+/* QUOTE */
+.middle-quote {
+    flex: 0 1 350px; /* enlarge quote area */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #E5E7EB;
+    
+}
+.quote-container {
+    /* needed to keep quote tag in line with quote */
+    display: flex;
+    flex-direction: column;
+    max-width: 625px;
+}
+
+.quote {
+    margin: 0;
+    font-size: 28px;
+    color: #1F2937;
+
+    /* max-width: 900px; */
+}
+
+.quote-tag {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1F2937;
+    align-self: flex-end;
+}
+
+/* CALL TO ACTION */
+.call-action {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around; /* instead of setting padding */
+    background-color: #3882F6;
+
+    border-radius: 12px;
+    padding: 50px 12px;
+    margin: 75px auto;
+}
+
+.call-action .header {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.call-action .subtext {
+    color: #E5E7EB;
+}
+
+.call-action button {
+    flex-grow: 0;
+    align-self: center; /* prevents growing on cross-axis */
+
+    background-color: #3882F6;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 8px 24px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1F2937;
+    color: white;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+header, .top, .middle-info, 
+.middle-quote, .call-action-container, footer {
+    padding: 12px;
+}
