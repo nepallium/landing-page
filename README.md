@@ -1,0 +1,1 @@
+Mock landing page created as a project for *The Odin Project* course. Practices Flexbox, HTML, and CSS workflows.
